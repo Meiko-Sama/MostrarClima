@@ -24,12 +24,32 @@
   </head>
   <body>
     <section class="container">
-      <div>
-        <form action="" id="registroTempo">
-          <i class="fa-solid fa-location-dot"></i>
-          <input type="text" id="searchbar" />
+      <form action="#" id="registroTempo">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" id="searchbar" placeholder="Cidade" />
+
+        <button>
           <i class="fa-solid fa-magnifying-glass"></i>
-        </form>
+        </button>
+      </form>
+      <div class="resultado">
+        <h1 class="titulo">Nome Cidade</h1>
+        <div class="info">
+          <div class="temp">
+            <img
+              src="#"
+              alt="A imagem que a API vai mandar referente ao clima da cidade"
+            />
+            <div>
+              <p class="temp_valor">32 <sup>C°</sup></p>
+              <p class="temp_desc">Ensolarado</p>
+            </div>
+          </div>
+        </div>
+        <!-- <i class="fa-solid fa-temperature-high"> </i>
+        <i class="fa-solid fa-temperature-low"> </i>
+        <i class="fa-solid fa-droplet"> </i>
+        <i class="fa-solid fa-wind"> </i> -->
       </div>
     </section>
   </body>

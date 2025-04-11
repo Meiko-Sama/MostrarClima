@@ -2,19 +2,28 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
+
+/* Configurações do body, tamanho, o gif de background e as 
+configurações pelo display flex */
 
 body {
   height: 100vh;
   width: 100%;
-  background: url("/img/solgif.gif") center / cover no-repeat;
+  background: url("/img/principal.gif") center / cover no-repeat;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section {
+/* configurações do container/section, tamanho dela, a cor do fundo e a
+opacidade dela, borda arredondada, um box shadow para resaltar a cor, 
+ajuste nas posições dos objetos e um espaço entre elas. */
+
+.container {
   background-color: rgb(0, 0, 0, 0.6);
 
   height: 55%;
@@ -26,25 +35,91 @@ section {
 
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 10px 20px;
 }
 
-div {
-}
+/* Configurações do form, ajuste dos objetos dentro dela, espaço entre eles,
+a cor da borda do formulario alem de deixar a borda dele arredondada */
 
 form {
-}
+  display: flex;
+  align-items: center;
 
-#searchbar {
-  color: white;
+  gap: 10px;
+
+  border-radius: 10px;
   border: 1px solid white;
-  background-color: transparent;
 
-  border-radius: 20px;
+  padding: 6px 12px;
 }
 
-.fa-solid {
-  height: 10px;
-  width: 10px;
+form input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  font-size: 16px;
 
   color: aliceblue;
+}
+
+form button {
+  background-color: transparent;
+
+  border: none;
+
+  cursor: pointer;
+}
+form i {
+  color: aliceblue;
+}
+
+.resultado {
+  width: 100%;
+}
+
+.resultado .info .temp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 20px;
+
+  color: aliceblue;
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow: 1px 1px aliceblue;
+}
+
+.resultado .titulo {
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+  text-align: center;
+
+  font-weight: 600;
+
+  color: aliceblue;
+}
+
+.resultado .temp {
+  color: aliceblue;
+}
+
+.temp_valor {
+  font-weight: bold;
+  font-size: 50px;
+
+  line-height: 55px;
+}
+
+.temp_desc {
+  text-transform: capitalize;
+  font-style: italic;
+  color: rgba(240, 248, 255, 0.627);
 }
