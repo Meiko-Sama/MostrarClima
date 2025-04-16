@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/styles.css" />
 
     <!-- LINK JS -->
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js" defer></script>
 
     <!-- LINK ICONS -->
     <link
@@ -20,36 +20,90 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Titulo Site na aba -->
     <title>Mostrar Clima</title>
   </head>
+
+  <!-- BODY do site -->
   <body>
+    <!-- Section que vai abrangir TODOS os elementos -->
     <section class="container">
+      <!-- O FORM vai abrangir APENAS o input, quando o usuario colocar o
+       nome da cidade que ee desejar na barra de pesquisa e APERTAR o
+       icone da lupa a API vai pegar o nome da cidade e MANDAR os dados
+       ao usuario
+        -->
       <form action="#" id="registroTempo">
         <i class="fa-solid fa-location-dot"></i>
         <input type="text" id="searchbar" placeholder="Cidade" />
 
-        <button>
+        <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
+
+      <!-- Nessa DIV ela vai colocar o nome da cidade ESCOLHIDA pelo
+       ususario e nessa parte que vai mandar uma imagem dizendo se o 
+       clima esta nublado, esolarado ou chuvoso (ou nevando?) além de 
+       falar qual é a temperatura atual do local-->
+
       <div class="resultado">
-        <h1 class="titulo">Nome Cidade</h1>
+        <h1 id="titulo">Nome Cidade</h1>
         <div class="info">
           <div class="temp">
             <img
-              src="#"
+              src=""
               alt="A imagem que a API vai mandar referente ao clima da cidade"
+              id="img"
             />
             <div>
-              <p class="temp_valor">32 <sup>C°</sup></p>
-              <p class="temp_desc">Ensolarado</p>
+              <p class="temp_valor" id="temp_atual"></p>
+              <p class="temp_desc" id="temp_desc"></p>
+            </div>
+          </div>
+
+          <!-- Aqui falara outras informações como a temperatura maxima 
+           e minima do local, além de falara da umidade e da força do vento.-->
+
+          <div class="outras_infos">
+            <!-- Temperatura máxima -->
+            <div class="infos">
+              <i class="temp_max_icon fa-solid fa-temperature-high"> </i>
+              <div>
+                <h2>Temp. Máx</h2>
+                <p id="temp_max"></p>
+              </div>
+            </div>
+
+            <!-- Temperatura mínima -->
+            <div class="infos">
+              <i class="temp_mix_icon fa-solid fa-temperature-low"> </i>
+              <div>
+                <h2>Temp. Min</h2>
+                <p id="temp_min"></p>
+              </div>
+            </div>
+
+            <!-- Umidade -->
+            <div class="infos">
+              <i class="humidity_icon fa-solid fa-droplet"> </i>
+              <div>
+                <h2>Umidade</h2>
+                <p id="humidity"></p>
+              </div>
+            </div>
+
+            <!-- Ventos -->
+            <div class="infos">
+              <i class="wind_icon fa-solid fa-wind"> </i>
+              <div>
+                <h2>Ventos</h2>
+                <p id="wind"></p>
+              </div>
             </div>
           </div>
         </div>
-        <!-- <i class="fa-solid fa-temperature-high"> </i>
-        <i class="fa-solid fa-temperature-low"> </i>
-        <i class="fa-solid fa-droplet"> </i>
-        <i class="fa-solid fa-wind"> </i> -->
       </div>
     </section>
   </body>
